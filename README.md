@@ -89,7 +89,7 @@ write (man 2 write)
 # Compilation
 ## Your shell will be compiled this way:
 
-`gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh`
+ gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh 
 
 
 # files
@@ -105,12 +105,12 @@ write (man 2 write)
 - execute.c - execute the command.
 
 ## How to add Author file
-`Bash script for generating the list of authors in git repo`
-```
+ Bash script for generating the list of authors in git repo 
+   
 #!/bin/sh
 
 git shortlog -se \
   | perl -spe 's/^\s+\d+\s+//' \
   | sed -e '/^CommitSyncScript.*$/d' \
   > AUTHORS
-  ```
+     
